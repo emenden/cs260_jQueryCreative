@@ -5,11 +5,11 @@ $("#submitBtn").click(function(){
    console.log(explicit);
    
    var getExplicit; 
-   if(explicit === false) {
-	getExplicit = "No";
+   if($("#explicitField").checked) {
+	getExplicit = "Yes";
    }
    else {
-	getExplicit = "Yes";
+	getExplicit = "No";
    }
    console.log(getExplicit);
    
