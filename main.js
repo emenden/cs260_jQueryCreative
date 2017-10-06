@@ -1,17 +1,17 @@
 $("#submitBtn").click(function(){
+   var $results = $("#results");
    var artist = $("#termField").val();
-   var explicit = $("#explicitField").checked;
-   console.log(artist);
-   console.log(explicit);
-   
-   var getExplicit; 
-   if($("#explicitField").checked) {
-	getExplicit = "Yes";
+   var explicit;
+   console.log($("#explicitField").val()); 
+   if($("#explicitField").val()) {
+	explicit = "Yes";
    }
    else {
-	getExplicit = "No";
+	explicit = "No";
    }
-   console.log(getExplicit);
+
+   console.log(artist);
+   console.log(explicit);
    
    var media = "musicVideo";
    var entity = "musicVideo";
@@ -29,5 +29,8 @@ $("#submitBtn").click(function(){
 	type: 'GET' 
    }).done(function(data){
 	console.log(data);
+	for (var i = 0; i < data["resultCount"]; i++) {
+ 	    $results.append("<li>" + data[i]["trackCensoredName"] + "</li>");
+	}
    });
 });
