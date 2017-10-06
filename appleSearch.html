@@ -3,24 +3,25 @@
 <head>
 <title>Music Video Search</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 
-<p>Search for Music Videos</p>
-<div id="input"></div>
+<h1><center>Search for Music Videos</center></h1>
 
 <body>
+<div id="input" class="text"><center>
 <form>
-Artist: <input type="text" id="termField" value=""><br>
-Explicit: <input type="checkbox" id="explicitField" checked="checked"><br>
+Artist: <input type="text" id="termField" value="">
+Explicit: <input type="checkbox" id="explicitField" checked="checked">
 <input  id="submitBtn" type="button" value="Find Music Videos">
 </form>
+</center></div>
 
-<p>Results</p>
-<div id="searchResults">
+<div id="searchResults" class="text"><center>
     <ul id="results">
     </ul>
-</div>
+</center></div>
 
 <script src="main.js"></script>
 </body>

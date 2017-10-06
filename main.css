@@ -1,0 +1,15 @@
+.text {
+   font-family: Arial;
+   background-color: white;
+}
+
+body {
+   background-color: white;
+}
+
+h1 {
+   color: white;
+   font-family: Arial;
+   background-color: black;
+   padding: 40px;
+}
